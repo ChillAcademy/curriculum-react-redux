@@ -12,6 +12,7 @@ It is created by using the Redux Toolkit configureStore function:
   import rootReducer from './reducers'
 
   const store = configureStore({ reducer: rootReducer })
+  
 It is accessed using the following functions:
 useSelector: returns current state.
 useDispatch: triggers an action on the store in order to update the state.
