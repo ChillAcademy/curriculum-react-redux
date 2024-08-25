@@ -7,6 +7,7 @@ Core concepts
 Store
 It is an object that holds the current application state.
 It is created by using the Redux Toolkit configureStore function:
+
   import { configureStore } from '@reduxjs/toolkit'
 
   import rootReducer from './reducers'
@@ -19,6 +20,7 @@ useDispatch: triggers an action on the store in order to update the state.
 See documentation
 Slice
 It is a part of the store, that holds feature-specific state (i.e. authentication, product cart, counter)
+
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = { value: 0 }
@@ -41,10 +43,12 @@ const counterSlice = createSlice({
 
 export const { increment, decrement, incrementByAmount } = counterSlice.actions
 export default counterSlice.reducer
+
 It contains both state, as well as state modifiers (called reducers)
 See documentation
 Provider
 A special component that connects the Redux store with a React application:
+
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
@@ -61,6 +65,7 @@ ReactDOM.render(
 See documentation
 useSelector
 A special function that accepts the Redux store state (or part of the state) as an argument, and returns data that is based on that state:
+
 import { useSelector } from 'react-redux'
 
 function Counter() {
@@ -68,9 +73,12 @@ function Counter() {
     
     return <div>The count is {count}!<div>
 }
+
 See documentation
 useDispatch
+
 A special function that accepts a reducer function. It is used to update the Redux store:
+
 import { useSelector, useDispatch } from 'react-redux'
 import { decrement, increment } from './counterSlice'
 
@@ -98,6 +106,7 @@ function Counter() {
     </div>
   )
 }
+
 See documentation
 Learn more
 For further learning, check out the following from the official documentation:
